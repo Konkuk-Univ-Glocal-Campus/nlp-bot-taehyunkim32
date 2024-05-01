@@ -1,26 +1,26 @@
 import random
 
-# This list contains the random responses (you can add your own or translate them into your own language too)
-random_responses = ["That is quite interesting, please tell me more.",
-                    "I see. Do go on.",
-                    "Why do you say that?",
-                    "Funny weather we've been having, isn't it?",
-                    "Let's change the subject.",
-                    "Did you catch the game last night?"]
+# 이 리스트에는 랜덤한 응답이 포함되어 있습니다. (여러분은 자신만의 언어를 추가하거나 자신만의 언어로 번역할 수도 있습니다.)
+random_responses = ["꽤 흥미롭네요, 자세히 알려주세요.",
+                    "알겠어요. 계속하세요.",
+                    "왜 그렇게 말하시나요?",
+                    "요즘 날씨가 참 재미있네요, 안 그래요?",
+                    "우리 주제를 바꿔 봅시다.",
+                    "어젯밤 경기 보셨어요"]
 
-print("Hello, I am Marvin, the simple robot.")
-print("You can end this conversation at any time by typing 'bye'")
-print("After typing each answer, press 'enter'")
-print("How are you today?")
+print("안녕하세요, 저는 간단한 로봇 마빈입니다.")
+print("'종료'를 입력하면 언제든지 이 대화를 끝낼 수 있습니다.")
+print("대답을 입력한 후에 '엔터'를 누릅니다.")
+print("오늘 기분 어떠세요?")
 
 while True:
-    # wait for the user to enter some text
+    # 유저가 텍스트를 입력할 때까지 대기
     user_input = input("> ")
-    if user_input.lower() == "bye":
-        # if they typed in 'bye' (or even BYE, ByE, byE etc.), break out of the loop
+    if user_input == "종료":
+        # "종료"를 입력하면, 무한 루프 탈출
         break
     else:
         response = random.choices(random_responses)[0]
     print(response)
 
-print("It was nice talking to you, goodbye!")
+print("만나서 반가웠어요, 안녕히 계세요!")
